@@ -1,0 +1,16 @@
+Package: wateryear
+Title: Define and Extract Water Years from Dates
+Version: 0.1-0
+Authors@R: 
+    person("Michael", "Koohafkan", , "michael.koohafkan@gmail.com", role = c("aut", "cre"))
+Description: The goal of this package is to provide a consistent set of
+    functions for associating calendar dates with water years.
+Imports:
+    lubridate
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
