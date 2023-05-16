@@ -6,7 +6,7 @@ Authors@R:
 Description: The goal of this package is to provide a consistent set of
     functions for associating calendar dates with water years.
 Imports:
-    lubridate
+    lubridate (>= 1.9)
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
