@@ -42,10 +42,10 @@ date can be determined via the `wateryear()` function:
 
 ```r
 wateryear("2004-01-01")
-#> [1] "2004"
+#> [1] 2004
 
 wateryear(as.Date("2007-09-01"))
-#> [1] "2007"
+#> [1] 2007
 
 wateryear(as.POSIXct("2008-11-15 12:00:00"))
 #> [1] 2009
