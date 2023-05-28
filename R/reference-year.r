@@ -28,6 +28,11 @@
 #' @param verbose If `TRUE`, produce a message echoing the reference
 #'   water year setting.
 #'
+#' @details To set the reference year automatically when attaching the
+#'   package, specify the option `wateryear.referenceyear`:
+#'
+#'   `options(wateryear.referenceyear = 3001)`
+#'
 #' @seealso [set_wateryear()] [with_referenceyear()]
 #' @importFrom lubridate make_date
 #' @export

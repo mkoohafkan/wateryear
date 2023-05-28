@@ -36,6 +36,12 @@
 #' @param verbose If `TRUE`, produce a message echoing the water year
 #'   setting.
 #'
+#' @details To set the water year automatically when attaching the
+#'   package, specify the option `wateryear.default`:
+#'
+#'   `options(wateryear.default = list(start = "10-01", end = "09-30",
+#'     fmt = "%m-%d"))`
+#'
 #' @importFrom lubridate as_date
 #' @export
 set_wateryear = function(start = "10-01", end = "09-30", fmt = "%m-%d",

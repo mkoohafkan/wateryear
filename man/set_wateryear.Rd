@@ -19,3 +19,9 @@ setting.}
 \description{
 Set the water year locale for the current session.
 }
+\details{
+To set the water year automatically when attaching the
+package, specify the option \code{wateryear.default}:
+
+\code{options(wateryear.default = list(start = "10-01", end = "09-30", fmt = "\%m-\%d"))}
+}
