@@ -9,6 +9,9 @@ wateryear(x)
 \arguments{
 \item{x}{A vector of dates or datetimes.}
 }
+\value{
+A numeric vector of water years.
+}
 \description{
 Get the water year of a calendar date.
 }

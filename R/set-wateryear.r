@@ -82,3 +82,12 @@ assert_wy_spec = function(start, end) {
       paste(strftime(c(start, end), "%m-%d"), collapse = " - "))
   }
 }
+
+
+#' @rdname assert_wy_spec
+#' @keywords internal
+is_wateryear_set = function() {
+  if (any(is.null(c(.wateryear$start(), .wateryear$end())))) {
+    stop("Water year is not set.", call. = FALSE)
+  }
+}

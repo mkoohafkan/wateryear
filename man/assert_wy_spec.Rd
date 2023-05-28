@@ -2,9 +2,12 @@
 % Please edit documentation in R/set-wateryear.r
 \name{assert_wy_spec}
 \alias{assert_wy_spec}
+\alias{is_wateryear_set}
 \title{Assert Water Year Specification}
 \usage{
 assert_wy_spec(start, end)
+
+is_wateryear_set()
 }
 \arguments{
 \item{start, end}{The water year start and end. Can be a \code{Date}

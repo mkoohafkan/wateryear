@@ -19,11 +19,13 @@ fixed_yday = function(x) {
 #' Get the water year of a calendar date.
 #'
 #' @param x A vector of dates or datetimes.
-#' @rturn A numeric vector of water years.
+#' @return A numeric vector of water years.
 #'
 #' @importFrom lubridate year
 #' @export
 wateryear = function(x) {
+  is_wateryear_set()
+  
   start = fixed_yday(.wateryear$start())
   end = fixed_yday(.wateryear$end())
   # correct water year if it crosses new year
