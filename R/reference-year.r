@@ -29,9 +29,9 @@
 #'   water year setting.
 #'
 #' @details To set the reference year automatically when attaching the
-#'   package, specify the option `wateryear.referenceyear`:
+#'   package, specify the option `wateryear.reference`:
 #'
-#'   `options(wateryear.referenceyear = 3001)`
+#'   `options(wateryear.reference = 3001)`
 #'
 #' @seealso [set_wateryear()] [with_referenceyear()]
 #' @importFrom lubridate make_date

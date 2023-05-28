@@ -25,7 +25,7 @@ fixed_yday = function(x) {
 #' @export
 wateryear = function(x) {
   is_wateryear_set()
-  
+
   start = fixed_yday(.wateryear$start())
   end = fixed_yday(.wateryear$end())
   # correct water year if it crosses new year

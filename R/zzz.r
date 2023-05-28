@@ -1,9 +1,8 @@
 .onAttach = function(libname, pkgname) {
   wyopt = getOption("wateryear.default")
-  ryopt = getOption("wateryear.referenceyear")
+  ryopt = getOption("wateryear.reference")
+
   msg = NULL
-
-
   if (!is.null(wyopt)) {
     msg = append(msg, tryCatch(do.call(set_wateryear, wyopt),
       message = function(m) conditionMessage(m)))

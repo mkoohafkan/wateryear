@@ -56,3 +56,39 @@ wateryear(as.POSIXct("2009-09-30 23:59:59"))
 wateryear("2009-10-01 00:00:00")
 #> [1] 2010
 ```
+
+For routine use, the water year can be defined via the option
+`wateryear.default` in a user's `.Rprofile`. The package will use this
+option to set the water year in the `.onAttach()` call.
+
+```r
+# set this is .Rprofile
+options(wateryear.default = list(start = "10-01", end = "09-30",
+  fmt = "%m-%d"))
+```
+
+The package also provides convenience functions for defining a
+"reference" water year. This concept is helpful for plotting or
+computing summary statistics based on the month or day of the year.
+
+```r
+set_referenceyear(3001)
+#> Reference year set to: 3001
+```
+
+You can then use the function `with_referenceyear()` to adjust dates
+to the reference water year:
+
+```r
+with_referenceyear(as.Date(c("2011-10-15", "2012-02-13")))
+#> [1] "3000-10-15" "3001-02-13"
+```
+
+For routine use, the reference year can be defined via the option
+`wateryear.reference` in a user's `.Rprofile`. The package will use this
+option to set the water year in the `.onAttach()` call.
+
+```r
+# set this is .Rprofile
+options(wateryear.reference = 3001)
+```

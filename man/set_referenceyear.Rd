@@ -17,9 +17,9 @@ Set the reference water year for the current session.
 }
 \details{
 To set the reference year automatically when attaching the
-package, specify the option \code{wateryear.referenceyear}:
+package, specify the option \code{wateryear.reference}:
 
-\code{options(wateryear.referenceyear = 3001)}
+\code{options(wateryear.reference = 3001)}
 }
 \seealso{
 \code{\link[=set_wateryear]{set_wateryear()}} \code{\link[=with_referenceyear]{with_referenceyear()}}
