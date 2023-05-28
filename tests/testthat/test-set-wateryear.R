@@ -1,8 +1,4 @@
-test_that("set water year from options", {
-  old_opts = options("wateryear.start", "wateryear.end",
-    "wateryear.format")
-  on.exit(options(old_opts), add = TRUE)
-
+test_that("set water year", {
   expect_message(expect_true(set_wateryear()),
     "Water year set to: 10-01 - 09-30")
   expect_true(set_wateryear(verbose = FALSE))

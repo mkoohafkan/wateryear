@@ -37,13 +37,17 @@
 #' @importFrom lubridate make_date
 #' @export
 set_referenceyear = function(reference_year, verbose = TRUE) {
-  ref_date = suppressWarnings(make_date(reference_year))
+  if (inherits(reference_year, "Date")) {
+    ref_date = reference_year
+  } else {
+    ref_date = suppressWarnings(make_date(reference_year))
+  }
   if (!isFALSE(is.na(ref_date))) {
     stop("Could not parse argument \"reference_year\".")
   }
   .referenceyear$set(ref_date)
   if (verbose) {
-    message("Reference year set to: ", .referenceyear$display())
+    message("Reference water year set to: ", .referenceyear$display())
   }
   invisible(TRUE)
 }
