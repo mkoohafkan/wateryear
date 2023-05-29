@@ -4,7 +4,12 @@
 \alias{set_wateryear}
 \title{Set Water Year}
 \usage{
-set_wateryear(start = "10-01", end = "09-30", fmt = "\%m-\%d", verbose = TRUE)
+set_wateryear(
+  start = "0000-10-01",
+  end = "0001-09-30",
+  fmt = "\%Y-\%m-\%d",
+  verbose = TRUE
+)
 }
 \arguments{
 \item{start, end}{The water year start and end. Can be a \code{Date}
