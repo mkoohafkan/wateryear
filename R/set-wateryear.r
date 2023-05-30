@@ -12,13 +12,15 @@
       .def$start <<- start
       .def$end <<- end
     },
-    display = function() {
-      paste(format(c(.def$start, .def$end), "%m-%d"),
-        collapse = " - ")
+    display = function(what = c("wateryear", "referenceyear")) {
+      switch(what,
+        "wateryear" = paste(format(c(.def$start, .def$end), "%m-%d"),
+          collapse = " - "),
+        "referenceyear" = format(.def$end, "%Y")
+      )
     },
     reset = function() {
-      .def$start <<- NULL
-      .def$end <<- NULL
+      .def <<- list()
     }
   )
 }
@@ -44,8 +46,8 @@
 #'
 #' @importFrom lubridate as_date
 #' @export
-set_wateryear = function(start = "10-01", end = "09-30", fmt = "%m-%d",
-verbose = TRUE) {
+set_wateryear = function(start = "0000-10-01", end = "0001-09-30",
+  fmt = "%Y-%m-%d", verbose = TRUE) {
   if (!inherits(start, "Date")) {
     start = suppressWarnings(as_date(start, format = fmt))
   }
@@ -55,7 +57,10 @@ verbose = TRUE) {
   assert_wy_spec(start, end)
   .wateryear$set(start = start, end = end)
   if (verbose) {
-    message("Water year set to: ", .wateryear$display())
+    message(
+      "Water year set to: ", .wateryear$display("wateryear"), "\n",
+      "Reference year set to: ", .wateryear$display("referenceyear")
+    )
   }
   invisible(TRUE)
 }
@@ -67,6 +72,7 @@ verbose = TRUE) {
 #'
 #' @inheritParams set_wateryear
 #'
+#' @importFrom lubridate leap_year
 #' @keywords internal
 assert_wy_spec = function(start, end) {
   if (!isFALSE(is.na(start))) {
@@ -74,18 +80,24 @@ assert_wy_spec = function(start, end) {
   } else if (!isFALSE(is.na(end))) {
     stop("Could not parse argument \"end\".")
   }
-  fixed_start = fixed_yday(start)
-  fixed_end =  fixed_yday(end)
-  if (fixed_start == fixed_end) {
+  if (fixed_yday(start) == fixed_yday(end)) {
     stop("Water year start and end fall on same day of year: ",
-      paste(strftime(c(start, end), "%m-%d"), collapse = " - "))
+      paste(strftime(c(start, end), "%m-%d"), collapse = " - "),
+      call. = FALSE)
   }
-  if (fixed_start > fixed_end) {
-    fixed_end = fixed_end + 366
+  if (end - start - leap_year(end) < 364) {
+    stop("Water year start is after end: ",
+      paste(strftime(c(start, end), "%Y-%m-%d"), collapse = " - "),
+      call. = FALSE)
   }
-  if (fixed_end - fixed_start < 365) {
-    stop("Water year start and end do not span full year: ",
-      paste(strftime(c(start, end), "%m-%d"), collapse = " - "))
+  if (end - start - leap_year(end) > 364) {
+    stop("Water year start and end spans more than a full year: ",
+      paste(strftime(c(start, end), "%Y-%m-%d"), collapse = " - "),
+      call. = FALSE)
+  }
+  if (!leap_year(end)) {
+    warning("Reference year is not a leap year: ", format(end, "%Y"),
+      call. = FALSE)
   }
 }
 
