@@ -31,15 +31,15 @@
     <loc>/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/set_referenceyear.html</loc>
+    <loc>/reference/referenceyear.html</loc>
   </url>
   <url>
     <loc>/reference/set_wateryear.html</loc>
   </url>
   <url>
-    <loc>/reference/wateryear.html</loc>
+    <loc>/reference/to_referenceyear.html</loc>
   </url>
   <url>
-    <loc>/reference/with_referenceyear.html</loc>
+    <loc>/reference/wateryear.html</loc>
   </url>
 </urlset>
