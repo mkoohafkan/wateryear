@@ -9,11 +9,11 @@ test_that("Adjust to reference water year", {
   v1 = c(rep("3001", 22), rep("3000", 8))
   v2 = c(rep("3001", 22), rep("3000", 8))
 
-  expect_equal(wateryear(to_referenceyear(t1951)), rep(3001, 30))
-  expect_equal(wateryear(to_referenceyear(t2004)), rep(3001, 30))
+  expect_equal(wateryear(with_refyear(t1951)), rep(3001, 30))
+  expect_equal(wateryear(with_refyear(t2004)), rep(3001, 30))
 
-  expect_identical(format(to_referenceyear(t1951), "%Y"), v1)
-  expect_identical(format(to_referenceyear(t2004), "%Y"), v2)
+  expect_identical(format(with_refyear(t1951), "%Y"), v1)
+  expect_identical(format(with_refyear(t2004), "%Y"), v2)
 
   expect_warning(set_wateryear("3001-01-01", "3001-12-31",
     verbose = FALSE))
@@ -21,12 +21,12 @@ test_that("Adjust to reference water year", {
   v3 = rep(3001, 30)
   v4 = rep(3001, 30)
 
-  expect_equal(wateryear(to_referenceyear(t1951)), rep(3001, 30))
-  expect_equal(wateryear(to_referenceyear(t2004)), rep(3001, 30))
+  expect_equal(wateryear(with_refyear(t1951)), rep(3001, 30))
+  expect_equal(wateryear(with_refyear(t2004)), rep(3001, 30))
 
-  expect_identical(format(to_referenceyear(t1951), "%Y"),
+  expect_identical(format(with_refyear(t1951), "%Y"),
     rep("3001", 30))
-  expect_identical(format(to_referenceyear(t2004), "%Y"),
+  expect_identical(format(with_refyear(t2004), "%Y"),
     rep("3001", 30))
 
 })

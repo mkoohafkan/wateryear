@@ -23,7 +23,7 @@ referenceyear = function() {
 #'
 #' @importFrom lubridate year `year<-`
 #' @export
-to_referenceyear = function(x) {
+with_refyear = function(x) {
   is_wateryear_set()
 
   year(x) = year(x) + referenceyear() - wateryear(x)

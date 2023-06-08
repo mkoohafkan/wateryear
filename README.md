@@ -71,9 +71,9 @@ options(wateryear.default = list(start = "3000-10-01",
 By setting the water year, you also set the "reference" water year,
 which is helpful for plotting or subsetting by month or day of year.
 You can adjust dates or datetimes to the reference year via
-`to_referenceyear()`:
+`with_refyear()`:
 
 ```r
-to_referenceyear(as.Date(c("2011-10-15", "2012-02-13")))
+with_refyear(as.Date(c("2011-10-15", "2012-02-13")))
 #> [1] "3000-10-15" "3001-02-13"
 ```
