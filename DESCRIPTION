@@ -5,6 +5,9 @@ Authors@R:
     person("Michael", "Koohafkan", , "michael.koohafkan@gmail.com", role = c("aut", "cre"))
 Description: The goal of this package is to provide a consistent set of
     functions for associating calendar dates with water years.
+URL: https://github.com/mkoohafkan/wateryear,
+    https://hydroecology.net/wateryear/
+BugReports: https://github.com/mkoohafkan/wateryear/issues
 Imports:
     lubridate (>= 1.9)
 License: MIT + file LICENSE
