@@ -96,7 +96,7 @@ assert_wy_spec = function(start, end) {
       call. = FALSE)
   }
   if (!leap_year(end)) {
-    warning("Reference year is not a leap year: ", format(end, "%Y"),
+    warning("Reference year is not a leap year.",
       call. = FALSE)
   }
 }
