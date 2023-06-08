@@ -55,7 +55,14 @@
   </ul>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/mkoohafkan/wateryear/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -71,7 +78,7 @@
       <h1 data-toc-skip>quickstart</h1>
             
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/mkoohafkan/wateryear/blob/HEAD/vignettes/quickstart.Rmd" class="external-link"><code>vignettes/quickstart.Rmd</code></a></small>
       <div class="hidden name"><code>quickstart.Rmd</code></div>
 
     </div>
@@ -103,7 +110,7 @@ current and future packages can depend on.</p>
 <p>The <code>wateryear</code> package provides a mechanism for defining
 the water year for the current R session:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">wateryear</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mkoohafkan/wateryear" class="external-link">wateryear</a></span><span class="op">)</span></span>
 <span><span class="co"># example: standard North America water year</span></span>
 <span><span class="fu"><a href="../reference/set_wateryear.html">set_wateryear</a></span><span class="op">(</span><span class="st">"3000-10-01"</span>, <span class="st">"3001-09-30"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning: Reference year is not a leap year: 3001</span></span>
@@ -137,9 +144,9 @@ package will use this option to set the water year in the
 <p>By setting the water year, you also set the “reference” water year,
 which is helpful for plotting or subsetting by month or day of year. You
 can adjust dates or datetimes to the reference year via
-<code><a href="../reference/to_referenceyear.html">to_referenceyear()</a></code>:</p>
+<code><a href="../reference/with_refyear.html">with_refyear()</a></code>:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/to_referenceyear.html">to_referenceyear</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"2011-10-15"</span>, <span class="st">"2012-02-13"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/with_refyear.html">with_refyear</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"2011-10-15"</span>, <span class="st">"2012-02-13"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
   </div>
 
