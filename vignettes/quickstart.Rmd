@@ -82,3 +82,15 @@ You can adjust dates or datetimes to the reference year via
 ```r
 with_refyear(as.Date(c("2011-10-15", "2012-02-13")))
 ```
+
+```{r}
+data(smithriver)
+
+smithriver["wy"] = wateryear(smithriver[["date"]])
+
+plot(with_refyear(smithriver$date), smithriver$discharge, col = factor(wateryear(smithriver$date)))
+
+
+
+```
+

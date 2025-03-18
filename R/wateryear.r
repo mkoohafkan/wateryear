@@ -35,3 +35,11 @@ wateryear = function(x) {
     year(x)
   }
 }
+
+
+wyday = function(x) {
+  is_wateryear_set()
+
+  fday = yday(with_refyear(x))
+
+}

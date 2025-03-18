@@ -12,6 +12,7 @@ referenceyear = function() {
   year(.wateryear$end())
 }
 
+
 #' To Reference Year
 #'
 #' Adjust dates or datetimes to the reference year. This is useful for
@@ -27,5 +28,8 @@ with_refyear = function(x) {
   is_wateryear_set()
 
   year(x) = year(x) + referenceyear() - wateryear(x)
+  if (any(is.na(x))) {
+    warning(sprintf("%d elements converted to NA", sum(is.na(x))))
+  }
   x
 }
