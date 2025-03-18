@@ -1,45 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>/articles/quickstart.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/assert_wy_spec.html</loc>
-  </url>
-  <url>
-    <loc>/reference/fixed_yday.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/referenceyear.html</loc>
-  </url>
-  <url>
-    <loc>/reference/set_wateryear.html</loc>
-  </url>
-  <url>
-    <loc>/reference/wateryear.html</loc>
-  </url>
-  <url>
-    <loc>/reference/with_refyear.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/articles/quickstart.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/reference/assert_wy_spec.html</loc></url>
+<url><loc>/reference/fixed_yday.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/referenceyear.html</loc></url>
+<url><loc>/reference/set_wateryear.html</loc></url>
+<url><loc>/reference/wateryear.html</loc></url>
+<url><loc>/reference/with_refyear.html</loc></url>
 </urlset>
+
